@@ -25,7 +25,7 @@
 | class of worker				ACLSWKR
 | industry code					ADTIND
 | occupation code				ADTOCC
-| adjusted gross income				AGI --------------> not present
+| adjusted gross income				AGI ---------------> not present
 | education					AHGA
 | wage per hour					AHRSPAY
 | enrolled in edu inst last wk			AHSCOL
@@ -43,7 +43,7 @@
 | divdends from stocks				DIVVAL
 | federal income tax liability			FEDTAX
 | tax filer status				FILESTAT
-| region of previous residence			GRINREG ----------> not present
+| region of previous residence			GRINREG -----------> not present
 | state of previous residence			GRINST
 | detailed household and family stat		HHDFMX
 | detailed household summary in household	HHDREL
@@ -60,12 +60,13 @@
 | country of birth mother			PEMNTVTY
 | country of birth self				PENATVTY
 | citizenship					PRCITSHP
-| total person income				PTOTVAL ----------> not present
+| total person income				PTOTVAL -----------> not present
 | own business or self employed			SEOTR
-| taxable income amount				TAXINC -----------> not present
+| taxable income amount				TAXINC ------------> not present
 | fill inc questionnaire for veteran's admin	VETQVA
 | veterans benefits				VETYN
 | weeks worked in year				WKSWORK
+| Income					INCOME ------------> ADD
 | 
 | Basic statistics for this data set:
 |
