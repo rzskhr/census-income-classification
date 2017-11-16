@@ -149,9 +149,43 @@ X['BirthCountry'] = ['United-States' if x == 'United-States'
 # check the values
 X['BirthCountry'].value_counts().sort_values(ascending=False)
 
+# Check the value counts
+X['HouseholdStatus'].value_counts().sort_values(ascending=False).head(10)
+
+
+# Bucket the low frequency category as other
+X['HouseholdStatus'] = ['Householder' if x == 'Householder'
+                        else 'Children' if x == 'Child <18 never marr not in subfamily'
+                        else 'Spouse' if x == 'Spsouse of householder'
+                        else 'Nonfamily' if x == 'Nonfamily householder'
+                        else 'Child_18_plus' if x == 'Child 18+ never marr Not in a subfamily'
+                        else 'Secondary_indv' if x == 'Secondary individual'
+                       else 'Other_Householders' for x in X['HouseholdStatus']]
+# check the values
+X['HouseholdStatus'].value_counts().sort_values(ascending=False)
+
+
+# Check the value counts
+X['PrevState'].value_counts().sort_values(ascending=False).head(10)
 
 
 
+# Dropping the 'PrevState' column
+X = X.drop(['PrevState'], axis=1)
+
+
+#
+#
+#
+#
+# Printing the top variables
+for col_name in X.columns:
+    print("\nFor column %s : " %col_name)
+    if X[col_name].dtype == 'object':
+        unique_val = len(X[col_name].unique())
+        print("'{col_name}' has --> {unique_val} unique features\
+        ".format(col_name=col_name, unique_val=unique_val))
+    print(X[col_name].value_counts().sort_values(ascending=False).head())
 
 
 
