@@ -35,6 +35,3 @@ with pd.option_context('display.max_columns', None):
 # Some statistics about the data
 censusDf.describe()
 
-
-a = censusDf_cleaned[censusDf_cleaned.isnull()]['HispanicOrigin']
-censusDf_cleaned['HispanicOrigin'] = censusDf_cleaned['HispanicOrigin'].replace(a , 'All other')
